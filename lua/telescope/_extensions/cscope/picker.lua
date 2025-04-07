@@ -4,7 +4,7 @@ if not pcall(require, "cscope_maps") then
 	error("This extension requires 'cscope_maps.nvim'. (https://github.com/dhananjaylatkar/cscope_maps.nvim)")
 end
 
-local helper = require("utils.maps_helper")
+local helper = require("cscope_maps.utils.helper")
 local cmds = {}
 for cmd, op in pairs(helper.sym_map) do
 	if string.match(op, "^Find") then
